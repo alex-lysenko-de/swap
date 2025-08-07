@@ -28,7 +28,7 @@ var floorPlanNew = {
 };
 
 var floorPlanMocks = [floorPlanDortmund, floorPlanLuenen, floorPlanNew];
-var floorPlanImgs = ["img/PlanDortmund.png", "img/PlanLuenen.jpg", "#"];
+var floorPlanImgs = ["img/PlanDortmund.png", "img/PlanLuenen.jpg", "img/PlanNew.jpg"];
 
 var roomTemplate = {
   hasRotatingPoint: false,

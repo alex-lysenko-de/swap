@@ -6,24 +6,23 @@
 
 ## 📋 Table of Contents
 
-1.  [Project Overview](https://www.google.com/search?q=%23-project-overview)
-2.  [Objectives](https://www.google.com/search?q=%23-objectives)
-3.  [How It Works](https://www.google.com/search?q=%23%EF%B8%8F-how-it-works)
-      * [Mathematical Model](https://www.google.com/search?q=%23mathematical-model)
-      * [Input Data](https://www.google.com/search?q=%23input-data)
-4.  [Key Features & Benefits](https://www.google.com/search?q=%23-key-features--benefits)
-5.  [User Guide](https://www.google.com/search?q=%23-user-guide)
-      * [1. Starting the Application](https://www.google.com/search?q=%231-starting-the-application)
-      * [2. Room and Workspace Planning](https://www.google.com/search?q=%232-room-and-workspace-planning)
-      * [3. Switching to Planning Mode](https://www.google.com/search?q=%233-switching-to-planning-mode)
-      * [4. Entering Schedules and Preferences](https://www.google.com/search?q=%234-entering-schedules-and-preferences)
-      * [5. Automatic Calculation and Results](https://www.google.com/search?q=%235-automatic-calculation-and-results)
-6.  [Results & Visualization](https://www.google.com/search?q=%23-results--visualization)
-7.  [Current Status](https://www.google.com/search?q=%23-current-status)
-8.  [Screenshots (Placeholder)](https://www.google.com/search?q=%23-screenshots-placeholder)
-9.  [Next Steps](https://www.google.com/search?q=%23-next-steps)
-10. [Author](https://www.google.com/search?q=%23-author)
-11. [License](https://www.google.com/search?q=%23-license)
+1.  [Project Overview](#-project-overview)
+2.  [Objectives](#-objectives)
+3.  [How It Works](#%EF%B8%8F-how-it-works)
+      * [Mathematical Model](#mathematical-model)
+      * [Input Data](#input-data)
+4.  [Key Features & Benefits](#input-data)
+5.  [User Guide](#-user-guide)
+      * [1. Starting the Application](#1-starting-the-application)
+      * [2. Room and Workspace Planning](#2-room-and-workspace-planning)
+      * [3. Switching to Planning Mode](#3-switching-to-planning-mode)
+      * [4. Entering Schedules and Preferences](#4-entering-schedules-and-preferences)
+      * [5. Automatic Calculation and Results](#5-automatic-calculation-and-results)
+6.  [Results & Visualization](#-results--visualization)
+7.  [Current Status](#-current-status)
+8.  [Screenshots (Placeholder)](#%EF%B8%8F-screenshots-placeholder)
+9.  [Next Steps](#-next-steps)
+
 
 -----
 
@@ -33,6 +32,7 @@ The Smart Workplace Allocation Platform (SWAP) is an intelligent tool designed f
 
 The platform automates the complex task of workspace assignment, ensuring an optimal and fair distribution of resources. It is particularly useful in environments with a high turnover of personnel, like students and interns, and where fixed seating arrangements aren't feasible.
 
+[🔙 Back](#-table-of-contents)
 -----
 
 ## 🎯 Objectives
@@ -47,6 +47,7 @@ The main goal of SWAP is to provide an automated solution for workspace allocati
   * Places members of the same project team together in the same room whenever possible.
   * Considers room availability and amenities.
 
+[🔙 Back](#-table-of-contents)
 -----
 
 ## ⚙️ How It Works
@@ -72,6 +73,7 @@ The system's planning algorithm uses the following data for each participant:
   * **Individual Preferences**: Preferred rooms or specific workspaces.
   * **(Future Feature)**: Desired neighbors or people to avoid.
 
+[🔙 Back](#-table-of-contents)
 -----
 
 ## ✨ Key Features & Benefits
@@ -82,6 +84,7 @@ The system's planning algorithm uses the following data for each participant:
   * **Scalability**: Works efficiently for both small and large teams (10 to 1000+ participants).
   * **Interactive Visualization**: Provides a visual and interactive seating chart that can be viewed daily.
 
+[🔙 Back](#-table-of-contents)
 -----
 
 ## 📝 User Guide
@@ -106,6 +109,7 @@ Each participant enters their attendance details, including their period of pres
 
 The system automatically calculates the optimal seating plan and visualizes it. You can view the daily plan and navigate through a calendar to see changes over time.
 
+[🔙 Back](#-table-of-contents)
 -----
 
 ## 📊 Results & Visualization
@@ -114,11 +118,16 @@ The system automatically calculates the optimal seating plan and visualizes it. 
   * **Calendar View**: Allows navigation through weeks and months.
   * **Flexible Expansion**: The platform is designed to be expandable for real-world environments.
 
+[🔙 Back](#-table-of-contents)
 -----
 
 ## ✅ Current Status
 
 The project is a **functional prototype**. The core logic is implemented and has been validated with test data. The application's behavior is flexible and logical.
+
+[🔙 Back](#-table-of-contents)
+-----
+
 
 ## 🖼️ Screenshots (Placeholder)
 
@@ -126,7 +135,8 @@ The project is a **functional prototype**. The core logic is implemented and has
   * 
   * 
   * 
-
+  
+[🔙 Back](#-table-of-contents)
 -----
 
 ## ✨ Next Steps
@@ -136,4 +146,6 @@ The project is a **functional prototype**. The core logic is implemented and has
   * [ ] Collect feedback for further development.
   * [ ] Begin development for real-world environments.
 
+
+[🔙 Back](#-table-of-contents)
 -----
