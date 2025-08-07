@@ -1,159 +1,139 @@
-### 🧠 Smart Workplace Allocation Platform (SWAP)  
-**Sitzplatz Verteilungs Application**  
-*Eine intelligente Plattform zur flexiblen und prioritätsbasierten Arbeitsplatzverteilung in dynamischen Umgebungen*  
+# Smart Workplace Allocation Platform (SWAP)
 
----
+### Sitzplatz Verteilungs Application
 
-### 📚 Inhaltsverzeichnis  
-1. [🎯 Projektübersicht](#-projektübersicht)  
-2. [📥 Eingabedaten & Anforderungen](#-eingabedaten--anforderungen)  
-3. [⚙️ Mathematisches Modell](#️-mathematisches-modell)  
-4. [💡 Vorteile der Plattform](#-vorteile-der-plattform)  
-5. [📤 Ergebnisse & Visualisierung](#-ergebnisse--visualisierung)  
-6. [🔧 Projektstatus](#-projektstatus)  
-7. [📘 Benutzeranleitung](#-benutzeranleitung)  
-8. [🖼️ Screenshots](#️-screenshots)  
-9. [✨ Nächste Schritte](#-nächste-schritte)  
-10. [📚 Mathematische Referenzen](#-mathematische-referenzen)  
+-----
 
----
+## 📋 Table of Contents
 
-### 🎯 Projektübersicht <a name="projektübersicht"></a>  
-SWAP automatisiert die Sitzplatzverteilung in Umgebungen mit hoher Fluktuation (z.B. Ausbildungszentren, flexible Büros).  
+1.  [Project Overview](https://www.google.com/search?q=%23-project-overview)
+2.  [Objectives](https://www.google.com/search?q=%23-objectives)
+3.  [How It Works](https://www.google.com/search?q=%23%EF%B8%8F-how-it-works)
+      * [Mathematical Model](https://www.google.com/search?q=%23mathematical-model)
+      * [Input Data](https://www.google.com/search?q=%23input-data)
+4.  [Key Features & Benefits](https://www.google.com/search?q=%23-key-features--benefits)
+5.  [User Guide](https://www.google.com/search?q=%23-user-guide)
+      * [1. Starting the Application](https://www.google.com/search?q=%231-starting-the-application)
+      * [2. Room and Workspace Planning](https://www.google.com/search?q=%232-room-and-workspace-planning)
+      * [3. Switching to Planning Mode](https://www.google.com/search?q=%233-switching-to-planning-mode)
+      * [4. Entering Schedules and Preferences](https://www.google.com/search?q=%234-entering-schedules-and-preferences)
+      * [5. Automatic Calculation and Results](https://www.google.com/search?q=%235-automatic-calculation-and-results)
+6.  [Results & Visualization](https://www.google.com/search?q=%23-results--visualization)
+7.  [Current Status](https://www.google.com/search?q=%23-current-status)
+8.  [Screenshots (Placeholder)](https://www.google.com/search?q=%23-screenshots-placeholder)
+9.  [Next Steps](https://www.google.com/search?q=%23-next-steps)
+10. [Author](https://www.google.com/search?q=%23-author)
+11. [License](https://www.google.com/search?q=%23-license)
 
-**Ziele:**  
-- Projektteams räumlich zusammenführen  
-- Prioritätenreihenfolge umsetzen:  
-  **1. Mitarbeitende** → **2. Auszubildende** → **3. Praktikant:innen**  
-- Individuelle Präferenzen & Raumkapazitäten berücksichtigen  
+-----
 
----
+## 🔍 Project Overview
 
-### 📥 Eingabedaten & Anforderungen <a name="eingabedaten--anforderungen"></a>  
-**Pro Person:**  
-- ⏳ Anwesenheitszeitraum (von/bis)  
-- 📅 Regelmäßige Tage (Mo–Fr)  
-- 🏖️ Geplante Abwesenheiten (Urlaub, Krankheit)  
-- ❤️ Präferenzen:  
-  - Bevorzugte Räume/Plätze  
-  - *(Zukünftig)* Wunsch-/Vermeidungsnachbarn  
+The Smart Workplace Allocation Platform (SWAP) is an intelligent tool designed for the automated and flexible assignment of workspaces in dynamic environments, such as training centers or flexible offices. Developed for mid-sized IT service providers with multiple offices and a dedicated training facility, SWAP addresses the challenges of high-demand, fluctuating occupancy, and the need for team-based seating arrangements.
 
----
+The platform automates the complex task of workspace assignment, ensuring an optimal and fair distribution of resources. It is particularly useful in environments with a high turnover of personnel, like students and interns, and where fixed seating arrangements aren't feasible.
 
-### ⚙️ Mathematisches Modell <a name="mathematisches-modell"></a>  
-#### 🔍 Problemtyp: **Ganzzahlige Lineare Optimierung (ILP)**  
-*Formulierung als Maximierung der Zufriedenheitsfunktion `U` unter Restriktionen.*  
+-----
 
-**Zielfunktion:**  
-```
-Maximiere U = Σ (w_p * x_p) 
-```  
-- `w_p`: Zufriedenheitsgewicht pro Person (höher für Prioritätsstufen)  
-- `x_p`: Binärvariable (1 = Platz zugewiesen, 0 = nicht zugewiesen)  
+## 🎯 Objectives
 
-**Restriktionen:**  
-1. **Kapazität:**  
-   `Σ x_p ≤ Kapazität_r ∀ Räume r`  
-2. **Anwesenheit:**  
-   `x_p = 0` bei Abwesenheit an Tag t  
-3. **Konflikte:**  
-   `x_p1 + x_p2 ≤ 1` bei inkompatiblen Personenpaaren  
-4. **Eindeutigkeit:**  
-   `Σ x_p = 1 ∀ Personen p` (genau ein Platz pro Person)  
+The main goal of SWAP is to provide an automated solution for workspace allocation that:
 
-**Lösungsmethoden:**  
-- **Simplex-Algorithmus** für kontinuierliche Relaxierung  
-- **Branch-and-Bound** für Ganzzahligkeit  
-- Heuristiken (z.B. Greedy) bei großen Instanzen  
+  * Integrates **individual attendance schedules** and **seating preferences**.
+  * Performs an **automatic seating calculation**.
+  * Considers **user priorities** (e.g., permanent employees \> students \> interns).
+  * Maximizes overall user satisfaction by fulfilling as many requests as possible.
+  * Dynamically reacts to data changes.
+  * Places members of the same project team together in the same room whenever possible.
+  * Considers room availability and amenities.
 
----
+-----
 
-### 💡 Vorteile der Plattform <a name="vorteile-der-plattform"></a>  
-✅ **Fairness**  
-> Automatisierte Priorisierung & Präferenzberücksichtigung  
-✅ **Effizienz**  
-> 90% Zeitersparnis vs. manuelle Planung  
-✅ **Flexibilität**  
-> Echtzeit-Anpassung bei Änderungen  
-✅ **Skalierbarkeit**  
-> 10 – 1000+ Personen  
+## ⚙️ How It Works
 
----
+### Mathematical Model
 
-### 📤 Ergebnisse & Visualisierung <a name="ergebnisse--visualisierung"></a>  
-**🗺️ Interaktive Raumkarten:**  
-- Platzbelegung mit Namen  
-- Farbmarkierung von Präferenzerfüllung  
-**📅 Kalenderansicht:**  
-- Tagesweise Belegungspläne  
-- Konflikthervorhebung  
-**📊 Auswertung:**  
-- Zufriedenheitsindex pro Team/Tag  
+The core of SWAP's functionality is an **optimization problem** aimed at maximizing a **satisfaction function `U`**. This function represents the overall satisfaction of all users, subject to various constraints:
 
----
+  * Room capacities.
+  * Attendance times.
+  * Seating conflicts and preferences.
+  * Priorities of user groups.
 
-### 🔧 Projektstatus <a name="projektstatus"></a>  
-- ✅ **Funktionsfähiger Prototyp**  
-- ✔️ Validierung mit Testdaten  
-- ✔️ Logik für Prioritäten & Präferenzen  
-- ➕ Erweiterungen für reale Szenarien in Entwicklung  
+This problem is modeled as a non-linear program and can be solved using methods like the **Simplex algorithm** or **heuristic approaches** for greater complexity.
 
----
+### Input Data
 
-### 📘 Benutzeranleitung <a name="benutzeranleitung"></a>  
-1. **Anwendung starten:**  
-   `index.html` im Browser öffnen.  
-2. **Raumlayout erstellen:**  
-   Räume/Plätze als Rechtecke zeichnen, IDs vergeben.  
-3. **Planungsmodus aktivieren:**  
-   Button *„Demonstration“* wählen.  
-4. **Daten eingeben:**  
-   Zeitpläne, Abwesenheiten, Präferenzen pro Person.  
-5. **Berechnung starten:**  
-   Automatische Generierung optimierter Tagespläne.  
+The system's planning algorithm uses the following data for each participant:
 
----
+  * **Period of Presence**: Start and end dates.
+  * **Regular Days**: The specific weekdays a person is present.
+  * **Planned Absences**: Vacations, business trips, or sick leave.
+  * **Individual Preferences**: Preferred rooms or specific workspaces.
+  * **(Future Feature)**: Desired neighbors or people to avoid.
 
-### 🖼️ Screenshots <a name="screenshots"></a>  
-*(Platzhalter für Implementierung)*  
-| ![Raumplanung](placeholder_raumanlage.png) | ![Kalender](placeholder_kalender.png) |  
-|:------------------------------------------:|:-------------------------------------:|  
-| *Raumkonfiguration*                        | *Tagesbelegungsansicht*               |  
+-----
 
----
+## ✨ Key Features & Benefits
 
-### ✨ Nächste Schritte <a name="nächste-schritte"></a>  
-- [ ] 📽️ Demo-Video erstellen  
-- [ ] 📸 Screenshots implementieren  
-- [ ] 💬 Nutzerfeedback einholen  
-- [ ] 🚀 ILP-Optimierung für große Datensätze  
+  * **Flexibility**: The platform adapts dynamically to new users, schedules, and constraints.
+  * **Automation**: It eliminates the need for manual planning, saving significant time.
+  * **Fairness**: Decisions are automated, fair, and transparent, taking into account user priorities and preferences.
+  * **Scalability**: Works efficiently for both small and large teams (10 to 1000+ participants).
+  * **Interactive Visualization**: Provides a visual and interactive seating chart that can be viewed daily.
 
----
+-----
 
-### 📚 Mathematische Referenzen <a name="mathematische-referenzen"></a>  
-**Formale Problembeschreibung:**  
-1. [Linear Programming (Wikipedia)](https://en.wikipedia.org/wiki/Linear_programming)  
-   > Grundlagen der Linearen Optimierung.  
-2. [Integer Linear Programming Handbook](https://www.math.uwaterloo.ca/~hwolkowi/henk/teaching/f10/370.w10/lecturenotes.pdf)  
-   > Theorie & Algorithmen für Ganzzahlige Probleme.  
-3. **Spezifische Formulierung:**  
-   ```
-   Minimiere: cᵀx  
-   Unter:   Ax ≤ b, x ≥ 0, x ∈ ℤ  
-   ```  
-   - `A`: Koeffizientenmatrix für Restriktionen  
-   - `b`: Kapazitäts-/Anwesenheitsvektor  
-   - `c`: Zielfunktionskoeffizienten (negierte Zufriedenheitsgewichte)  
+## 📝 User Guide
 
-**Lösungstools:**  
-- [SCIP Optimizer Suite](https://www.scipopt.org/)  
-- [Python PuLP Library](https://coin-or.github.io/pulp/)  
+### 1\. Starting the Application
 
----
+Open the `index.html` file in a web browser. This will load the initial interface for planning the training center.
 
-### 🛠️ Autor & Lizenz  
-Alexander Lysenko – [alex.lysenko.de@gmail.com](mailto:alex.lysenko.de@gmail.com)  
-📄 **MIT License** – Freie Nutzung bei Namensnennung.  
+### 2\. Room and Workspace Planning
 
---- 
-💡 *Dieses Dokument kombiniert die Stärken beider Vorlagen: Klare mathematische Formulierung als ILP-Problem, praktische Anleitungen und Referenzen für die Optimierungslösung.*
+Draw the schematic layout of the training center by creating **rooms** and **workspaces** as rectangles. Each room and workspace must have a unique ID.
+
+### 3\. Switching to Planning Mode
+
+Click the "**Demonstration**" button to enter the planning mode.
+
+### 4\. Entering Schedules and Preferences
+
+Each participant enters their attendance details, including their period of presence, regular weekdays, planned absences, and preferred rooms or workspaces.
+
+### 5\. Automatic Calculation and Results
+
+The system automatically calculates the optimal seating plan and visualizes it. You can view the daily plan and navigate through a calendar to see changes over time.
+
+-----
+
+## 📊 Results & Visualization
+
+  * **Interactive Plan View**: An overview that shows who is sitting where (room & seat) on a daily basis.
+  * **Calendar View**: Allows navigation through weeks and months.
+  * **Flexible Expansion**: The platform is designed to be expandable for real-world environments.
+
+-----
+
+## ✅ Current Status
+
+The project is a **functional prototype**. The core logic is implemented and has been validated with test data. The application's behavior is flexible and logical.
+
+## 🖼️ Screenshots (Placeholder)
+
+  * 
+  * 
+  * 
+  * 
+
+-----
+
+## ✨ Next Steps
+
+  * [ ] Create a demonstration video and screenshots.
+  * [ ] Document use cases.
+  * [ ] Collect feedback for further development.
+  * [ ] Begin development for real-world environments.
+
+-----
