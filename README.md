@@ -1,7 +1,8 @@
-# Smart Workplace Allocation Platform (SWAP)
+# Smart Workplace Allocation Platform ([SWAP](https://alex-lysenko-de.github.io/swap/))
 
 ### Sitzplatz Verteilungs Application
 
+A practical example of using the [Hungarian Algorithm](https://en.wikipedia.org/wiki/Hungarian_algorithm) for the [Assignment Problem](https://en.wikipedia.org/wiki/Assignment_problem)
 -----
 
 ## 📋 Table of Contents
@@ -32,7 +33,7 @@ The Smart Workplace Allocation Platform (SWAP) is an intelligent tool designed f
 
 The platform automates the complex task of workspace assignment, ensuring an optimal and fair distribution of resources. It is particularly useful in environments with a high turnover of personnel, like students and interns, and where fixed seating arrangements aren't feasible.
 
-[🔙 Back](#-table-of-contents)
+[🔙 ToC](#-table-of-contents)
 -----
 
 ## 🎯 Objectives
@@ -47,7 +48,7 @@ The main goal of SWAP is to provide an automated solution for workspace allocati
   * Places members of the same project team together in the same room whenever possible.
   * Considers room availability and amenities.
 
-[🔙 Back](#-table-of-contents)
+[🔙 ToC](#-table-of-contents)
 -----
 
 ## ⚙️ How It Works
@@ -61,7 +62,7 @@ The core of SWAP's functionality is an **optimization problem** aimed at maximiz
   * Seating conflicts and preferences.
   * Priorities of user groups.
 
-This problem is modeled as a non-linear program and can be solved using methods like the **Simplex algorithm** or **heuristic approaches** for greater complexity.
+This is the classical **Assigment problem** in Linear Programming that can be solved using **Hungarian algorythm** (or the Kuhn-Munkres algorithm)
 
 ### Input Data
 
@@ -71,9 +72,9 @@ The system's planning algorithm uses the following data for each participant:
   * **Regular Days**: The specific weekdays a person is present.
   * **Planned Absences**: Vacations, business trips, or sick leave.
   * **Individual Preferences**: Preferred rooms or specific workspaces.
-  * **(Future Feature)**: Desired neighbors or people to avoid.
 
-[🔙 Back](#-table-of-contents)
+
+[🔙 ToC](#-table-of-contents)
 -----
 
 ## ✨ Key Features & Benefits
@@ -84,32 +85,41 @@ The system's planning algorithm uses the following data for each participant:
   * **Scalability**: Works efficiently for both small and large teams (10 to 1000+ participants).
   * **Interactive Visualization**: Provides a visual and interactive seating chart that can be viewed daily.
 
-[🔙 Back](#-table-of-contents)
+[🔙 ToC](#-table-of-contents)
 -----
 
 ## 📝 User Guide
 
 ### 1\. Starting the Application
 
-Open the `index.html` file in a web browser. This will load the initial interface for planning the training center.
+Open the `[index.html](https://alex-lysenko-de.github.io/swap/)` file in a web browser. This will load the initial interface for planning the training center.
 
 ### 2\. Room and Workspace Planning
 
-Draw the schematic layout of the training center by creating **rooms** and **workspaces** as rectangles. Each room and workspace must have a unique ID.
+Draw the schematic layout of the training center by creating **rooms** and **workspaces** as rectangles. 
+![Screenshot_3.png](img/Screenshot_3.png)
 
 ### 3\. Switching to Planning Mode
 
-Click the "**Demonstration**" button to enter the planning mode.
+Click the "**Go To Demo Mode**" button to enter the planning mode.
+![Screenshot_4.png](img/Screenshot_4.png)
 
 ### 4\. Entering Schedules and Preferences
 
-Each participant enters their attendance details, including their period of presence, regular weekdays, planned absences, and preferred rooms or workspaces.
+Each participant enters their attendance details, including their period of presence, regular weekdays, planned absences, and preferred rooms or workplaces (tables).
+![Screenshot_9.png](img/Screenshot_9.png)
+![Screenshot_10.png](img/Screenshot_10.png)
+![Screenshot_6.png](img/Screenshot_6.png)
+![Screenshot_7.png](img/Screenshot_7.png)
+
 
 ### 5\. Automatic Calculation and Results
 
 The system automatically calculates the optimal seating plan and visualizes it. You can view the daily plan and navigate through a calendar to see changes over time.
 
-[🔙 Back](#-table-of-contents)
+![Screenshot_11.png](img/Screenshot_11.png)
+
+[🔙 ToC](#-table-of-contents)
 -----
 
 ## 📊 Results & Visualization
@@ -117,15 +127,16 @@ The system automatically calculates the optimal seating plan and visualizes it. 
   * **Interactive Plan View**: An overview that shows who is sitting where (room & seat) on a daily basis.
   * **Calendar View**: Allows navigation through weeks and months.
   * **Flexible Expansion**: The platform is designed to be expandable for real-world environments.
+  
 
-[🔙 Back](#-table-of-contents)
+[🔙 ToC](#-table-of-contents)
 -----
 
 ## ✅ Current Status
 
 The project is a **functional prototype**. The core logic is implemented and has been validated with test data. The application's behavior is flexible and logical.
 
-[🔙 Back](#-table-of-contents)
+[🔙 ToC](#-table-of-contents)
 -----
 
 
@@ -136,16 +147,6 @@ The project is a **functional prototype**. The core logic is implemented and has
   * 
   * 
   
-[🔙 Back](#-table-of-contents)
+[🔙 ToC](#-table-of-contents)
 -----
 
-## ✨ Next Steps
-
-  * [ ] Create a demonstration video and screenshots.
-  * [ ] Document use cases.
-  * [ ] Collect feedback for further development.
-  * [ ] Begin development for real-world environments.
-
-
-[🔙 Back](#-table-of-contents)
------
