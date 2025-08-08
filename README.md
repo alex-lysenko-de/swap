@@ -65,8 +65,6 @@ The core of SWAP's functionality is formulated as an **optimization problem** ai
   * Seating conflicts and preferences.
   * Priorities of user groups.
 
-This is the classical  of [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming) that can be solved using [Hungarian algorythm](https://en.wikipedia.org/wiki/Hungarian_algorithm) (also known as the **Kuhn-Munkres** algorithm)
-
 This problem can be modeled as a classical [Assigment problem](https://en.wikipedia.org/wiki/Assignment_problem), a well-known combinatorial optimization problem. When formulated with linear constraints and a linear objective, it can be efficiently solved using the [Hungarian algorythm](https://en.wikipedia.org/wiki/Hungarian_algorithm) (also known as the **Kuhn-Munkres** algorithm), assuming the problem is balanced (i.e., equal number of agents and tasks). For more complex or unbalanced cases, advanced methods such as **Mixed Integer Programming** (MIP) or **Constraint Programming** (CP) may be applied.
 
 
