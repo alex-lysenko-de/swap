@@ -58,14 +58,17 @@ The main goal of SWAP is to provide an automated solution for workspace allocati
 
 ### Mathematical Model
 
-The core of SWAP's functionality is an **optimization problem** aimed at maximizing a **satisfaction function `U`**. This function represents the overall satisfaction of all users, subject to various constraints:
+The core of SWAP's functionality is formulated as an **optimization problem** aimed at maximizing a global satisfaction function **U**, which aggregates the preferences and priorities of all users. The optimization is subject to constraints such as:
 
   * Room capacities.
   * Attendance times.
   * Seating conflicts and preferences.
   * Priorities of user groups.
 
-This is the classical [Assigment problem](https://en.wikipedia.org/wiki/Assignment_problem) of [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming) that can be solved using [Hungarian algorythm](https://en.wikipedia.org/wiki/Hungarian_algorithm) (also known as the **Kuhn-Munkres** algorithm)
+This is the classical  of [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming) that can be solved using [Hungarian algorythm](https://en.wikipedia.org/wiki/Hungarian_algorithm) (also known as the **Kuhn-Munkres** algorithm)
+
+This problem can be modeled as a classical [Assigment problem](https://en.wikipedia.org/wiki/Assignment_problem), a well-known combinatorial optimization problem. When formulated with linear constraints and a linear objective, it can be efficiently solved using the [Hungarian algorythm](https://en.wikipedia.org/wiki/Hungarian_algorithm) (also known as the **Kuhn-Munkres** algorithm), assuming the problem is balanced (i.e., equal number of agents and tasks). For more complex or unbalanced cases, advanced methods such as **Mixed Integer Programming** (MIP) or **Constraint Programming** (CP) may be applied.
+
 
 ### Input Data
 
@@ -75,7 +78,10 @@ The system's planning algorithm uses the following data for each participant:
   * **Regular Days**: The specific weekdays a person is present.
   * **Planned Absences**: Vacations, business trips, or sick leave.
   * **Individual Preferences**: Preferred rooms or specific workspaces.
-
+  
+![Screenshot_9.png](img/Screenshot_9.png)
+----
+![Screenshot_10.png](img/Screenshot_10.png)
 
 [🔙 ToC](#-table-of-contents)
 -----
@@ -101,20 +107,21 @@ Open the [index.html](https://raw.githack.com/alex-lysenko-de/swap/main/index.ht
 
 Draw the schematic layout of the training center by creating **rooms** and **workspaces** as rectangles. 
 ![Screenshot_3.png](img/Screenshot_3.png)
+----
 
 ### 3\. Switching to Planning Mode
 
 Click the "**Go To Demo Mode**" button to enter the planning mode.
 ![Screenshot_4.png](img/Screenshot_4.png)
+----
 
 ### 4\. Entering Schedules and Preferences
 
 Each participant enters their attendance details, including their period of presence, regular weekdays, planned absences, and preferred rooms or workplaces (tables).
-![Screenshot_9.png](img/Screenshot_9.png)
-![Screenshot_10.png](img/Screenshot_10.png)
+
 ![Screenshot_6.png](img/Screenshot_6.png)
 ![Screenshot_7.png](img/Screenshot_7.png)
-
+----
 
 ### 5\. Automatic Calculation and Results
 
