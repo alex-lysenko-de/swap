@@ -134,6 +134,7 @@ function FloorEditor(canvas, floorPlanService, floorPlanComponent) {
         setFloorPlan(plan);
         showData(plan);
         $("#bg-img").attr("src", floorPlanImgs[planId]);
+		setZoom(1);
     }
 
 

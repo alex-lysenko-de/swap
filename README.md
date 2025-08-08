@@ -3,6 +3,7 @@
 ### Sitzplatz Verteilungs Application
 
 A practical example of using the [Hungarian Algorithm](https://en.wikipedia.org/wiki/Hungarian_algorithm) for the [Assignment Problem](https://en.wikipedia.org/wiki/Assignment_problem)
+
 -----
 
 ## 📋 Table of Contents
@@ -32,6 +33,8 @@ A practical example of using the [Hungarian Algorithm](https://en.wikipedia.org/
 The Smart Workplace Allocation Platform (SWAP) is an intelligent tool designed for the automated and flexible assignment of workspaces in dynamic environments, such as training centers or flexible offices. Developed for mid-sized IT service providers with multiple offices and a dedicated training facility, SWAP addresses the challenges of high-demand, fluctuating occupancy, and the need for team-based seating arrangements.
 
 The platform automates the complex task of workspace assignment, ensuring an optimal and fair distribution of resources. It is particularly useful in environments with a high turnover of personnel, like students and interns, and where fixed seating arrangements aren't feasible.
+
+![2.png](img/2.png)
 
 [🔙 ToC](#-table-of-contents)
 -----
@@ -92,7 +95,7 @@ The system's planning algorithm uses the following data for each participant:
 
 ### 1\. Starting the Application
 
-Open the `[index.html](https://alex-lysenko-de.github.io/swap/)` file in a web browser. This will load the initial interface for planning the training center.
+Open the [index.html](https://raw.githack.com/alex-lysenko-de/swap/main/index.html) file in a web browser. This will load the initial interface for planning the training center.
 
 ### 2\. Room and Workspace Planning
 
