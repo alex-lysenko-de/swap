@@ -62,7 +62,7 @@ The core of SWAP's functionality is an **optimization problem** aimed at maximiz
   * Seating conflicts and preferences.
   * Priorities of user groups.
 
-This is the classical **Assigment problem** in Linear Programming that can be solved using **Hungarian algorythm** (or the Kuhn-Munkres algorithm)
+This is the classical [Assigment problem](https://en.wikipedia.org/wiki/Assignment_problem) of [Linear Programming](https://en.wikipedia.org/wiki/Linear_programming) that can be solved using [Hungarian algorythm](https://en.wikipedia.org/wiki/Hungarian_algorithm) (also known as the **Kuhn-Munkres** algorithm)
 
 ### Input Data
 
@@ -139,14 +139,4 @@ The project is a **functional prototype**. The core logic is implemented and has
 [🔙 ToC](#-table-of-contents)
 -----
 
-
-## 🖼️ Screenshots (Placeholder)
-
-  * 
-  * 
-  * 
-  * 
-  
-[🔙 ToC](#-table-of-contents)
------
 
