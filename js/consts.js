@@ -8,7 +8,6 @@ const CLASS_ROOM_NAME = 'RoomName';
 const INDENT_X = 30;
 const INDENT_Y = 30;
 
-const ABSEND_TABLE_BASE_NAME = 'AbsendTable';
 const TABLE_COLOR_RESERVED = 'lightgray';
 const TABLE_COLOR = 'rgb(193, 154, 107)';
 

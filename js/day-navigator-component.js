@@ -49,7 +49,7 @@ function DayNavigatorComponent(mediator) {
 
     function setDate(date) {
         let oldDate = getDate()
-        if (date.getTime() != oldDate.getTime()) {
+        if (date.getTime() !== oldDate.getTime()) {
             $datePicker.datepicker("setDate", date);
             mediator.notify({ type: MSG_CHANGE_CURRENT_DATE });
         }
