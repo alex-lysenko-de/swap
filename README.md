@@ -35,11 +35,13 @@ The Smart Workplace Allocation Platform (SWAP) is an intelligent tool designed f
 The platform automates the complex task of workspace assignment, ensuring an optimal and fair distribution of resources. It is particularly useful in environments with a high turnover of personnel, like students and interns, and where fixed seating arrangements aren't feasible.
 
 **The Problem and SWAP's Solution:**
-> **Problem:** Manually managing dynamic workspace assignments for fluctuating staff (students, interns, permanent employees) is complex, time-consuming, and prone to errors, often failing to optimally satisfy team-based and individual preferences.
->
-> **Solution (SWAP):** An intelligent platform that automatically calculates the optimal seating plan by maximizing a global satisfaction function based on attendance schedules, user priorities, and individual seating preferences.
+ **Problem:** Manually managing dynamic workspace assignments for fluctuating staff (students, interns, permanent employees) is complex, time-consuming, and prone to errors, often failing to optimally satisfy team-based and individual preferences.
 
-![GIF 1: Problem & Solution]
+
+![GIF 1: Problem & Solution](img/swap-intro.gif)
+
+ **Solution (SWAP):** An intelligent platform that automatically calculates the optimal seating plan by maximizing a global satisfaction function based on attendance schedules, user priorities, and individual seating preferences.
+
 ![2.png](img/2.png)
 
 [🔙 ToC](#-table-of-contents)
@@ -51,7 +53,7 @@ The main goal of SWAP is to provide an automated solution for workspace allocati
 
   * Integrates **individual attendance schedules** and **seating preferences**.
   * Performs an **automatic seating calculation**.
-  * Considers **user priorities** (e.g., permanent employees > students > interns).
+  * Considers **user priorities** (e.g., permanent employees \> students \> interns).
   * Maximizes overall user satisfaction by fulfilling as many requests as possible.
   * Dynamically reacts to data changes.
   * Places members of the same project team together in the same room whenever possible.
@@ -110,9 +112,7 @@ Open the [index.html](https://raw.githack.com/alex-lysenko-de/swap/main/index.ht
 ### 2\. Room and Workspace Planning
 
 Draw the schematic layout of the training center by creating **rooms** and **workspaces** as rectangles. 
-> *GIF 2 should go here: showing the drawing of rooms and workspaces.*
-
-![GIF 2: Drawing the Office Layout]
+![GIF 2: Drawing the Office Layout](img/create_plan.gif)
 ![Screenshot_3.png](img/Screenshot_3.png)
 ----
 
@@ -125,7 +125,7 @@ Click the "**Go To Demo Mode**" button to enter the planning mode.
 ### 4\. Entering Schedules and Preferences
 
 Each participant enters their attendance details, including their period of presence, regular weekdays, planned absences, and preferred rooms or workplaces (tables).
-
+![GIF 3: Setting Schedules and Viewing Automatic Allocation](img/demo1.gif)
 ![Screenshot_6.png](img/Screenshot_6.png)
 ![Screenshot_7.png](img/Screenshot_7.png)
 ----
@@ -133,10 +133,10 @@ Each participant enters their attendance details, including their period of pres
 ### 5\. Automatic Calculation and Results
 
 The system automatically calculates the optimal seating plan and visualizes it. You can view the daily plan and navigate through a calendar to see changes over time.
-> *GIF 3 should go here: showing schedule/preference input and the resulting automatic calculation/visualization.*
 
-![GIF 3: Setting Schedules and Viewing Automatic Allocation]
 ![Screenshot_11.png](img/Screenshot_11.png)
+![GIF 3: Setting Schedules and Viewing Automatic Allocation](img/demo2.gif)
+
 
 [🔙 ToC](#-table-of-contents)
 -----
