@@ -7,10 +7,14 @@ function HungarianAdapter(algType = 2) {
             return [];
         }
         var lowCostMatrix = getInverted(profitMatrix);
+        var results;
         switch (algType) {
-            case HUNGARIAN_ON3: return runHungarianOn3(lowCostMatrix);
-            case MUNKRES: return runMunkres(lowCostMatrix);
+            case HUNGARIAN_ON3: results = runHungarianOn3(lowCostMatrix);
+            case MUNKRES: results =  runMunkres(lowCostMatrix);
         }
+        console.log("Hungarian algorithm results:");
+        console.log(results);
+        return results;
     }
 
     function runHungarianOn3(matrix) {
@@ -30,12 +34,23 @@ function HungarianAdapter(algType = 2) {
     }
 
     function getInverted(matrix) {
-        // find biggest value;
-        var biggest = matrix.reduce((prevMax, row) => Math.max(prevMax, ...row), -Infinity);
-        console.log(biggest);
+        // find the biggest value of the matrix
+        var biggest = -Infinity;
+        for (var i = 0; i < matrix.length; i++) {
+            for (var j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] > biggest) {
+                    biggest = matrix[i][j];
+                }
+
+            }
+        }
+        console.log('biggest value: ' + biggest);
+        // var biggest = matrix.reduce((prevMax, row) => Math.max(prevMax, ...row), -Infinity);
         // clone and invert
         var clone = matrix.map(row => row.map(value => biggest - value));
+        console.log('inverted matrix:');
         console.log(clone);
+
         return clone;
     }
 }   
