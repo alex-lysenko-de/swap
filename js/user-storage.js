@@ -31,7 +31,8 @@ function UserStorage() {
     this.get = function (userIds) {
         var result = [];
         userIds.forEach(id => {
-            var filtered = users.filter(user => user.id == id);
+            id = parseInt(id);
+            var filtered = users.filter(user => user.id === id);
             if (filtered.length) {
                 result.push(filtered[0]);
             }

@@ -41,6 +41,10 @@ function DayNavigatorComponent(mediator) {
             setDate(nextDate);
         });
         $datePicker.datepicker("setDate", new Date());
+        // add date change event handler
+        $datePicker.on("change", function () {
+            mediator.notify({ type: MSG_CHANGE_CURRENT_DATE });
+        });
     }
 
     function getDate() {

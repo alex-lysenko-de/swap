@@ -35,12 +35,12 @@ function AssessmentMatrix(arrOfUserIds, arrOfTableIds, options = {}) { // builde
         var result = smartMatrix.getValues(cellAttributes,
             (userPriority, isRoomImportant, isTableImportant, roomValue, tableValue, userPrice) => {
                 var result;
-                if (isTableImportant && (tableValue == 0)) {
+                if (isTableImportant && (tableValue === 0)) {
                     result = options.nullValue;
-                } else if (isRoomImportant && (roomValue == 0) && (tableValue == 0)) {
+                } else if (isRoomImportant && (roomValue === 0) && (tableValue === 0)) {
                     result = options.nullValue;
                 } else {
-                    result = userPriority * options.priorityWeight + options.egalWeight + roomValue + tableValue + userPrice;
+                    result = userPriority * options.priorityWeight * (options.egalWeight + roomValue + tableValue + userPrice);
                 }
                 return result;
             });

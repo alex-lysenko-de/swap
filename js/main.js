@@ -7,9 +7,9 @@ $(document).ready(function () {
     var floorPlanComponent = new FloorPlanComponent(canvas);
     var editor = new FloorEditor(canvas, floorPlanService, floorPlanComponent);
     var demo = new FloorPlanDemo(canvas, floorPlanService, floorPlanComponent, tableService);
-    var modeSwitcher = new ModeSwitcher(demo, editor);
+    window.modeSwitcher = new ModeSwitcher(demo, editor);
     //alertBeforeClose(true);
-    runAllTests();
+    //runAllTests();
 });
 
 function alertBeforeClose(b) {

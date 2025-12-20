@@ -3,7 +3,8 @@ function ScheduleService(dayNavigatorService, floorPlanService, seatDistribution
     var scheduleStorage = new ScheduleStorage();
 
     this.getDaySchedule = function (planId, date) {
-        const schedule = createDaySchedule(planId, date.getTime());
+        let schedule = createDaySchedule(planId, date.getTime());
+        console.log('schedule for ', date.toISODate(), schedule);
         return schedule; //!!! remove this line after test
 
         // let schedule = scheduleStorage.get(planId, date);
@@ -16,7 +17,7 @@ function ScheduleService(dayNavigatorService, floorPlanService, seatDistribution
 
     this.createAllDays = function (planId) {
         var days = dayNavigatorService.getDayArray();
-        schedule = {};
+        let schedule = {};
         days.forEach(day => {
             var daySchedule = createDaySchedule(planId, day);
             const date = new Date(day);            

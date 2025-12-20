@@ -29,6 +29,7 @@ function DateIntervalDialog(selector, floorPlanService) {
     var $users = $(selector).find("[name=userId]");
     var $tables = $(selector).find("[name=tableId]");
     var $rooms = $(selector).find("[name=roomId]");
+    var $bOtherTablesPassed = $(selector).find("[name=bOtherTablesPassed]");
     var dpFrom = null;
     var dpTo = null;
     var callbackfn = null;

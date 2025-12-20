@@ -79,6 +79,9 @@ function FloorEditor(canvas, floorPlanService, floorPlanComponent) {
         });
 
         canvas.on('mouse:wheel', function (opt) {
+            if (window.modeSwitcher.getMode() !== 1) {
+                return; // only in edit mode
+            }
             var delta = opt.e.deltaY;
             var zoom = canvas.getZoom();
             zoom = zoom + delta / 2000;
