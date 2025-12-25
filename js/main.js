@@ -9,7 +9,7 @@ $(document).ready(function () {
     var demo = new FloorPlanDemo(canvas, floorPlanService, floorPlanComponent, tableService);
     window.modeSwitcher = new ModeSwitcher(demo, editor);
     //alertBeforeClose(true);
-    //runAllTests();
+    runAllTests();
 });
 
 function alertBeforeClose(b) {

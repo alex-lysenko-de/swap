@@ -58,14 +58,15 @@ function DateIntervalDialog(selector, floorPlanService) {
             if (k > 0) {
                 field.name = field.name.substr(0, k);
                 if (!result.hasOwnProperty(field.name)) {
-                    result[field.name] = [];
+                    result[ field.name ] = [];
                 }
-                result[field.name].push(field.value);
+                result[ field.name ].push(field.value);
             } else {
-                result[field.name] = field.value;
+                result[ field.name ] = field.value;
             }
         });
         return result;
+
     }
 
     this.show = function (data, aPlanId, aCallbackFn) {
@@ -94,25 +95,31 @@ function DateIntervalDialog(selector, floorPlanService) {
         if (data.hasOwnProperty('to')) {
             data.to = timeStampToStr(data.to);
         }
+
+        if (!data.hasOwnProperty('bOtherTablesPassed')) {
+            data.bOtherTablesPassed = 1;
+        }
         // fill out other fields
         for (var x in data) {
             if (x === 'days') {
                 var $input = $form.find('[name="' + x + '[]"]')
                 $input.prop('checked', false);
-                data[x].forEach(val => {
+                data[ x ].forEach(val => {
                     $input.filter('[value=' + val + ']').prop('checked', true);
                 });
             } else {
-                $form.find('[name=' + x + ']').val(data[x]);
+                $form.find('[name=' + x + ']').val(data[ x ]);
             }
         }
+
+        //$bOtherTablesPassed.val(data.bOtherTablesPassed);
         // disable select
         if (data.hasOwnProperty('userId')) {
             $users.find('option[value=' + data.userId + ']').prop('selected', true);
             $users.find('option:not(:selected)').prop('disabled', true);
             var userArr = users.filter(user => user.id == data.userId);
             if (userArr.length) {
-                $form.find('.user-name').text(userArr[0].name);
+                $form.find('.user-name').text(userArr[ 0 ].name);
             }
         }
         // open dialog
@@ -133,17 +140,17 @@ function DateIntervalDialog(selector, floorPlanService) {
 
     function init() {
         dpFrom = $from.datepicker({
-            minDate: 0,
-            defaultDate: "0",
-            changeMonth: true,
-            numberOfMonths: 1,
-            dateFormat: dateFormat
+            minDate : 0,
+            defaultDate : "0",
+            changeMonth : true,
+            numberOfMonths : 1,
+            dateFormat : dateFormat
         });
         dpTo = $to.datepicker({
-            defaultDate: "+1w",
-            changeMonth: true,
-            numberOfMonths: 1,
-            dateFormat: dateFormat
+            defaultDate : "+1w",
+            changeMonth : true,
+            numberOfMonths : 1,
+            dateFormat : dateFormat
         });
 
         dpFrom.on("change", function () {
@@ -154,23 +161,23 @@ function DateIntervalDialog(selector, floorPlanService) {
         });
 
         dialog = $(selector).dialog({
-            autoOpen: false,
+            autoOpen : false,
             //height: 400,
             //width: 350,
-            dialogClass: 'reservation-dialog',
-            modal: true,
-            buttons: {
-                "Save": function () {
+            dialogClass : 'reservation-dialog',
+            modal : true,
+            buttons : {
+                "Save" : function () {
                     if (addReservation()) {
                         dialog.dialog("close");
                     }
                 },
-                Cancel: function () {
+                Cancel : function () {
                     dialog.dialog("close");
                 }
             },
-            close: function () {
-                $form[0].reset();
+            close : function () {
+                $form[ 0 ].reset();
                 dpFrom.datepicker("option", "minDate", new Date());
                 dpFrom.datepicker("option", "maxDate", new Date(2050, 1, 1));
                 dpTo.datepicker("option", "minDate", new Date());
@@ -197,5 +204,6 @@ function DateIntervalDialog(selector, floorPlanService) {
             }
             $tables.val('');
         });
+
     }
 }

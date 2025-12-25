@@ -1,6 +1,6 @@
 const TIME_TABLE_BASE_NAME = "TimeTableV1";
 const ABSENCE_TABLE_BASE_NAME = "AbsenceTableV1";
-const AUTO_MAP_PROPERTIES = ['id', 'from', 'to', 'userId', 'roomId', 'tableId'];
+const AUTO_MAP_PROPERTIES = ['id', 'from', 'to', 'userId', 'roomId', 'tableId', 'bOtherTablesPassed'];
 const WEEK_DAYS = [64, 1, 2, 4, 8, 16, 32]; // Mo=1, Di=2, Mi=4, Do=8, Fr=16, Sa=32, So=64
 const ALL_DAYS = 31; // 1+2+4+8+16
 
