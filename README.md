@@ -158,7 +158,7 @@ The project is a **functional prototype**. The core logic is implemented and has
 [🔙 ToC](#-table-of-contents)
 -----
 
-## 🖼️ ![Watch on YouTube](https://www.youtube.com/watch?v=s-IgR9etbo0)
+## [Watch on YouTube](https://www.youtube.com/watch?v=s-IgR9etbo0)
 
 [🔙 ToC](#-table-of-contents)
 -----   
